@@ -1,10 +1,16 @@
 import React from 'react';
+import ChildComponent from './ChildComponent';
 
 class MyComponent extends React.Component {
     // object => state: key: value
     state = {
         firstName: ' ',
-        lastName: ' '
+        lastName: ' ',
+        arrJob: [
+            { id: 'job1', title: 'developer', salary: '500$' },
+            { id: 'job2', title: 'tester', salary: '400$' },
+            { id: 'job3', title: 'manager', salary: '1000$' }
+        ]
     }
     //JSX => return block of code
     //fragment => <></> => <React.Fragment></React.Fragment>
@@ -45,6 +51,12 @@ class MyComponent extends React.Component {
                         onClick={(event) => this.handleSubmit(event)}
                     />
                 </form>
+                <ChildComponent
+                    name={this.state.firstName}
+                    age={'20'}
+                    adress={'HaNoi'}
+                    job={this.state.arrJob}
+                />
             </>
         )
     }
