@@ -2,6 +2,8 @@ import logo from './logo.svg';
 import './App.scss';
 import MyComponent from './Example/MyComponent.js'
 
+// 2 component class / function
+
 function App() {
   //const app = () => {}, arrowfunction 
   return (
@@ -11,14 +13,7 @@ function App() {
         <p>
           Hello world! this is a simple react app
         </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
+
         <MyComponent />
         {/* <MyComponent></MyComponent> */}
       </header>
