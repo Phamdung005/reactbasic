@@ -7,9 +7,9 @@ class MyComponent extends React.Component {
         firstName: ' ',
         lastName: ' ',
         arrJob: [
-            { id: 'job1', title: 'developer', salary: '500$' },
-            { id: 'job2', title: 'tester', salary: '400$' },
-            { id: 'job3', title: 'manager', salary: '1000$' }
+            { id: 'job1', title: 'developer', salary: '500' },
+            { id: 'job2', title: 'tester', salary: '400' },
+            { id: 'job3', title: 'manager', salary: '1000' }
         ]
     }
     //JSX => return block of code
@@ -52,7 +52,7 @@ class MyComponent extends React.Component {
                     />
                 </form>
                 <ChildComponent
-                    name={this.state.firstName}
+                    name={this.state.firstName + ' ' + this.state.lastName}
                     age={'20'}
                     adress={'HaNoi'}
                     job={this.state.arrJob}
