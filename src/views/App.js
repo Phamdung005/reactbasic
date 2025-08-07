@@ -1,7 +1,7 @@
 import logo from './logo.svg';
 import './App.scss';
-import MyComponent from './Example/MyComponent.js'
-
+// import MyComponent from './Example/MyComponent.js'
+import ListTodo from './Todos/ListTodo.js';
 // 2 component class / function
 
 function App() {
@@ -11,12 +11,26 @@ function App() {
       <header className="App-header">
         <img src={logo} className="App-logo" alt="logo" />
         <p>
-          Hello world! this is a simple react app
+          Simple to do app
         </p>
 
-        <MyComponent />
         {/* <MyComponent></MyComponent> */}
+        <ListTodo />
       </header>
+
+      {/* <ToastContainer
+        position="top-right"
+        autoClose={5000}
+        hideProgressBar={false}
+        newestOnTop={false}
+        closeOnClick={false}
+        rtl={false}
+        pauseOnFocusLoss
+        draggable
+        pauseOnHover
+        theme="light"
+        transition={Bounce}
+      /> */}
     </div>
   );
 }

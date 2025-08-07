@@ -52,8 +52,6 @@ class ChildComponent extends React.Component {
         )
     }
 }
-
-
 // const ChildComponent = (props) => {
 //     console.log('check props: ', props)
 //     let { job } = props;
