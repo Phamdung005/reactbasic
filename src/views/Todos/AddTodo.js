@@ -1,4 +1,6 @@
 import React from 'react';
+import { ToastContainer, toast, Bounce } from 'react-toastify';
+
 
 class AddTodo extends React.Component {
     state = {
@@ -9,12 +11,16 @@ class AddTodo extends React.Component {
         this.setState({
             title: event.target.value
         })
+        if (!this.state.title) {
+            toast.error("Title is required!");
+            return;
+        }
     }
 
     handleAddTodo = () => {
         if (!this.state.title) {
             //undefined/null/empty => false
-            alert('Missing title');
+            toast.error("Title is required!");
             return;
         }
         let todo = {
